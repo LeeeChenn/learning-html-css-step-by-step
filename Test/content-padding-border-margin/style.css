@@ -1,0 +1,47 @@
+
+#main {
+    background-color: white; 
+    padding: 0px; 
+    border: 1px solid red;
+    width: 260px;
+}
+#container {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    padding: 30px;
+    margin: 20px;
+    border: 30px solid green;
+}
+
+#margin {
+    position: absolute; 
+    left: 110px; 
+    top: 8px; 
+    color: blue;
+}
+
+#padding {
+    position: absolute; 
+    left: 110px; 
+    top: 60px; 
+    color: red;
+}
+
+#border {
+    position: absolute; 
+    left: 110px; 
+    top: 32px; 
+    color: yellow;
+}
+
+#content {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+}

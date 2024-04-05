@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+/* box-sizing 的作用是控制 width 与 height 作用的对象空间 */
+/** 
+ * box-sizing 的两个值：content-box（宽高设定作用在内容范围）
+ *                    border-box（宽高设定作用在边框外缘的范围内）
+ */
+* {
+  box-sizing: border-box;
+}
+/* https://www.oxxostudio.tw/articles/201706/pseudo-element-1.html */
+/* ::before, ::after 伪元素 */
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  /* 用于某个元素的字体族名称或/及类族名称的一个优先表 */
+  font-family: "Mukta", sans-serif; 
+  /* font-size 属性用于设置字体大小 */
+  font-size: 1rem;
+  /* line-height 属性设置行间的距离（行高）。 */
+  line-height: 1.5;
+  /**
+   * display 属性设置元素是否被视为块或者内联元素以及用于子元素的布局
+   * Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。
+   * https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+   */
+  display: flex;
+  /* align-items属性定义项目在交叉轴上如何对齐。 */
+  align-items: center;
+  /* justify-content属性定义了项目在主轴上的对齐方式 */
+  justify-content: center;
+  /* margin 外边距 */
+  margin: 0;
+  /* min-height 属性设置元素的最低高度 */
+  /* https://www.freecodecamp.org/chinese/news/css-unit-guide/ */
+  /* vh、 vm、 em、 rem、 像素 px */
+  /**
+   * 绝对长度单位：px:   像素。1px = 1/96th of 1in
+   * 相对长度单位：em:   在 font-size 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 width。
+   *                   如 2em，是指 2 * font-size
+   *             rem:  根元素的字体大小。通常根元素是指<html></html>的字体大小
+   *             vh:   视口高度的 1%。100vh 是整个视图高度
+   *             vw:   视口宽度的 1%。100vw 是整个视图宽度
+   *             vmin: 选取 vw 和 wh 中最小的那个
+   *             vmax: 选取 vw 和 vh 中最大的那个
+   *             %:    百分比，或相对于父级大小的百分比大小
+   */
+  min-height: 100vh;
+  /* 背景 */
+  background: #f3f8fa;
+}
+
+/**
+ *  step 1
+ */
+@supports (display: grid) { 
+    body {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.625rem;
+      grid-template-areas: ". main main ." ". main main .";
+    }
+    #container {
+      grid-area: main; 
+      align-self: center;
+      justify-self: center;
+    }
+  }

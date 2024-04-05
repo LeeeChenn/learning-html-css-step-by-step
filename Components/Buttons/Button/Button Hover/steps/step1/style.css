@@ -1,0 +1,30 @@
+/**
+ * @supports 用于检测浏览器是否支持 CSS 的某个属性
+ */
+@supports (display: grid) { /* 检测浏览器是否支持 grid 布局 */
+    /**
+     * 参考：https://blog.csdn.net/weixin_45092437/article/details/132910278 
+     *      https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html
+     */
+    body {
+      /*该属性值用于设置元素内部的显示类型为网格布局，其外显类型为块级元素。该类型的元素将内部分为行和列，
+        划分成一个个单元格，并通过一系列相关属性控制单元格的布局和大小。*/
+      display: grid;
+      /* 定义每一列的列宽 */
+      /* 为了方便表示比例关系，网格布局提供了fr关键字（fraction 的缩写，意为"片段"） */
+      /* 这里使用 repeat 函数，表示 4 个 重复片段 */
+      grid-template-columns: repeat(4, 1fr);
+      /* 定义列间距和行间距，是column-gap与row-gap的简写形式 */
+      grid-gap: 0.625rem;
+      /* 网格布局允许指定"区域"（area），一个区域由单个或多个单元格组成。grid-template-areas属性用于定义区域。 */
+      /* 如果某些区域不需要利用，则使用"点"（.）表示。 */
+      grid-template-areas: ". main main ." ". main main .";
+    }
+    #container {
+      grid-area: main; /* 区域名 */
+      /* 定义项目在单元格区域内的垂直位置（上中下），与align-items用法一致，但效果仅限于当前项目 */
+      align-self: center;
+      /* 定义项目在单元格区域内的水平位置（左中右），与justify-items用法一致，但效果仅限于当前项目 */
+      justify-self: center;
+    }
+  }
