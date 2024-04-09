@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>translucent borders</title>
+        <style>
+            body {
+                background: url('../assets/stone-art.jpg');
+            }
+
+            div {
+                /* 边框属性 */
+                /* hsla() 定义 HSL 颜色，并设置透明度*/
+                border: 10px solid hsla(0, 0%, 100%, .5);
+                background: white;
+                /* 设置元素背景的渲染区域，取值范围： border-box、padding-box、content-box*/
+                /* 参考：https://www.runoob.com/cssref/css3-pr-background-clip.html */
+                background-clip: padding-box;
+
+                /* styling */
+                /* max-width属性确实不包括填充（padding）、边框（border）或页边距（margin） */
+                /* 可以通过设置 box-sizing 属性来改变宽度的计算方式 */
+                max-width: 20em; /* 最大宽度 */
+                padding: 2em; /* 填充 */
+                /* margin:10px 5px 15px 20px;  上右下左，即顺时针方向的边距 */
+                /* margin:10px 5px 15px;       上 右左 下，右左边距合用 */
+                /* margin:10px 5px;            上下 右左，上下、右左分别合用 */
+                /* margin:10px;                四个方向边距合用 */
+
+                /* 这里左右页边距为 auto，最后效果居中 */
+                margin: 2em auto 0; /* 页边距 */
+                /* 字体属性 */
+                /* font-size/line-height, font-family : 规定字体尺寸和行高, 字体系列 */
+                font: 100%/1.5 sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            Can I haz semi-transparent borders?
+            Pretty please?
+        </div>
+    </body>
+</html>
