@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>polka</title>
+        <style>
+            .base > div {
+                width: 300px;
+                height: 300px;
+                margin: 20px;
+                display: inline-block;
+            }
+            .grid-1 {
+                background: #655;
+                /* radial-gradient() 函数用径向渐变创建 "图像"。
+                   径向渐变由中心点定义。
+                   为了创建径向渐变你必须设置两个终止色。 
+                */
+                /* radial-gradient(shape size at position, start-color, ..., last-color) */
+                background-image: radial-gradient(tan 30%, transparent 0);
+                background-size: 30px 30px;
+            }
+            .grid-2 {
+                background: #655;
+                background-image: radial-gradient(tan 20%, transparent 0),
+                                  radial-gradient(tan 20%, transparent 0);
+                background-size: 30px 30px;
+                background-position: 0 0, 15px 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="base">
+            <div class="grid-1"></div>
+            <div class="grid-2"></div>
+        </div>
+    </body>
+</html>

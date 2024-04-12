@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>continuous image borders</title>
+        <style>
+            div {
+                border: 1em solid transparent;
+                background: linear-gradient(white, white), url(../assets/stone-art.jpg);
+                background-size: cover;
+                /* background-clip属性指定背景绘制区域。 */
+                /* background-clip: border-box|padding-box|content-box; */
+                background-clip: padding-box, border-box;
+                background-origin: border-box;
+                width: 21em;
+                padding: 1em;
+                /* 参考：https://www.runoob.com/css/css-overflow.html */
+                /* CSS overflow 属性可以控制内容溢出元素框时在对应的元素区间内添加滚动条。 */
+                /* overflow 属性只工作于指定高度的块元素上。 */
+                /* overflow: visible|hidden|scroll|auto|inherit */
+                overflow: auto;
+                /* resize属性指定一个元素是否是由用户调整大小的。 */
+                /* resize: none|both|horizontal|vertical: */
+                resize: both;
+                /* font-family 可以把多个字体名称作为一个"回退"系统来保存。如果浏览器不支持第一个字体，则会尝试下一个。 */
+                font: 150%/1.6 Baskerville, Palationo, serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div>Bacon ipsum dolor amet eu adipisicing elit tongue ground round ex fatback proident kielbasa ham hock. Sausage beef beef ribs aliquip t-bone mollit. Quis beef tri-tip sunt, cupim ut magna salami t-bone. Ut laboris bresaola ribeye biltong landjaeger. Chuck pork belly sed sausage.</div>
+    </body>
+</html>
