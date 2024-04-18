@@ -23,3 +23,11 @@
 - [老式信封样式边框](./background-border/vintage-envelope.html)：利用渐变实现老式信封样式边框。
 - [蚂蚁行军边框](./background-border/marching-ants.html)：虚线边框动画。
 - [脚注](./background-border/footnote.html)：脚注。
+
+## 形状
+- [自适应的椭圆](./shape/ellipse.html)：**border-radius** 可以单独指定水平和垂直半径，只要用一个斜杠（/）分隔这两个值即可。这个特性允许在拐角处创建椭圆圆角。
+- [半椭圆](./shape/half-ellipse.html)
+- [四分之一椭圆](./shape/quarter-ellipse.html)
+- [平行四边形](./shape/parallelograms.html)：通过skew的变形属性对矩形进行拉伸。
+- [平行四边形](./shape/parallelograms-pseudo.html)：利用伪元素以及定位属性产生一个方块，然后对伪元素设置样式，并将其放置在其宿主元素对下层。当想变形一个元素而不想变形它对内容时非常有用。
+- [菱形图片](./shape/diamond-images.html)：通过rotate变形 + scale变形实现菱形图片，旋转后图片的宽度应与容器对角线相等。
